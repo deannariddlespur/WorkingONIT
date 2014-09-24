@@ -134,7 +134,9 @@ class PagesController extends BaseController {
 				$client = Client::findOrFail(Input::get('featureOfGroup'));
 				$client->true = Input::get('true');
 				$client->save();
-				return Redirect::action('PagesController@home');
+			return View::make('edit.clientFeatureEdit')->with('featuresOfGroup',$featuresOfGroup)
+												  ->with('clientFeatures_FeatureID',$clientFeatures_FeatureID)
+												  ->with('siteName',$siteName)->with('group',$group);
 		}
 
 }
