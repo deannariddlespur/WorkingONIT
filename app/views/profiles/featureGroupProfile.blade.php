@@ -18,7 +18,7 @@
 		@foreach ($featuresOfGroup as $featureOfGroup)
 			<li class="list-group-item"><h5>
 					
-					{{Form::radio('featureID', $featureOfGroup->featureID,'true')}}
+					{{Form::checkbox('featureID', $featureOfGroup->featureID,'true')}}
 					{{Form::label($featureOfGroup->featureName,$featureOfGroup->featureName, array('class'=>'text-info'))}}<br>
 			</h5></li>				
 		@endforeach	
