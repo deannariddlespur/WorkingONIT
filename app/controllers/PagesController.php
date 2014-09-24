@@ -131,7 +131,7 @@ class PagesController extends BaseController {
 	     	}
 		 public function doEdit()
 		{
-				client = Client::findOrFail(Input::get('clientID'));
+				$client = Client::findOrFail(Input::get('featureOfGroup'));
 				$client->true = Input::get('true');
 				$client->save();
 				return Redirect::action('PagesController@home');
