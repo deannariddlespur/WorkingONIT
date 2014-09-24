@@ -16,7 +16,9 @@
 	{{Form::open(array('action' => 'PagesController@groupProfileFeatureDelete','class'=>'profileForm'))}}
 	<ul class="list-group">	
 		@foreach ($featuresOfGroup as $featureOfGroup)
-			<li class="list-group-item"><h5>							
+			<li class="list-group-item"><h5>
+					{{ Form::checkbox('used', 1,$featureOfGroup->used) }}
+										
 				{{Form::radio('featureID', $featureOfGroup->featureID,'true')}}
 				{{Form::label($featureOfGroup->featureName,$featureOfGroup->featureName, array('class'=>'text-info'))}}<br>
 			</h5></li>				

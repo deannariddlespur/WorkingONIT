@@ -19,3 +19,5 @@ Route::post('FeatureGroupFeatureAdd','PagesController@featureGroupFeatureAdd');
 Route::post('ClientFeatureEdit', 'PagesController@profileEditClientFeature');
 Route::get('/create','PagesController@create');
 Route::post('/create', 'PagesController@saveCreate');
+Route::get('/edit/{client}','PagesController@edit');
+Route::post('/edit', 'PagesController@doEdit');

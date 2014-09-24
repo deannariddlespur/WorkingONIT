@@ -129,5 +129,12 @@ class PagesController extends BaseController {
 	     		
 	     		return Redirect::action('PagesController@home');
 	     	}
+		 public function doEdit()
+		{
+				client = Client::findOrFail(Input::get('clientID'));
+				$client->used = Input::get('used');
+				$client->save();
+				return Redirect::action('PagesController@home');
+		}
 
 }
